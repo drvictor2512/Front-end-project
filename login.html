@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="icon" href="nikelogo.png">
+        <link rel="stylesheet" href="login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=PT+Serif&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="formbox">
+                <h1 id="title">Sign Up</h1>
+                <form>
+                    <div class="input_group">
+                        <div class="input_field" id="nameField">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" placeholder="Full Name" id="contact-name" onkeyup="validatename()">
+                            <span id="name_error"></span>
+                        </div>
+
+                        <div class="input_field">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="Email" id="contact-email" onkeyup="validateemail()">
+                            <span id="email_error"></span>
+                        </div>
+
+                        <div class="input_field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" id="check-password" onkeyup="validatepassword()">
+                            <span id="password_error"></span>
+                        </div>
+                        <p>Lost password <a href="#">Click here!</a></p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signup">Sign Up</button>
+                        <button type="button" id="signin" class="disable">Sign In</button>
+                    </div>
+                    <button id="submit" onclick="return validateform()">Submit</button>
+                    <span id="submiterror"></span>
+                </form>
+            </div>
+        </div>
+
+        <script src="login.js"></script>
+    </body>
+</html>
